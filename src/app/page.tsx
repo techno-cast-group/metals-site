@@ -31,7 +31,6 @@ export default function Home() {
     return () => clearInterval(timer);
   }, [backgroundImages.length]);
 
-  const companyImages: string[] = [];
   const productCategories: ProductCategory[] = [
     {
       name: "Tôles",
@@ -183,7 +182,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-12 px-4">
-        <div className="bg-[#23495A] rounded-xl shadow-lg p-8 max-w-xl text-white">
+        <div className="bg-primary rounded-xl shadow-lg p-8 max-w-xl text-white">
           <h2 className="text-lg font-bold mb-2">
             TECHNOCAST Metals and Alloys
           </h2>
@@ -240,7 +239,7 @@ export default function Home() {
       <br />
 
       {/* Company Logos Carousel */}
-      <div className="w-full bg-[#23495A] py-8 flex justify-center items-center">
+      <div className="w-full bg-primary py-8 flex justify-center items-center">
         <div className="flex gap-12 flex-wrap justify-center items-center">
           {/* Replace these with your actual company logo images */}
           <Image src="/sarpi-logo.png" alt="Sarpi" width={80} height={60} />
@@ -294,7 +293,7 @@ export default function Home() {
       {/* Produits Sidérurgiques Section */}
       <div className="w-full py-12 px-4 bg-white">
         <div className="flex items-center mb-8">
-          <div className="bg-[#23495A] px-8 py-3 rounded-r-lg text-white text-xl font-bold uppercase shadow">
+          <div className="bg-primary px-8 py-3 rounded-r-lg text-white text-xl font-bold uppercase shadow">
             PRODUITS SIDÉRURGIQUES
           </div>
         </div>
@@ -315,7 +314,7 @@ export default function Home() {
                 <h2 className="text-lg font-semibold mb-2">{category.name}</h2>
                 <Link
                   href={`/products/${category.id}`}
-                  className="inline-flex items-center px-4 py-1 bg-[#23495A] text-white rounded-full font-medium hover:bg-[#16313F] transition"
+                  className="inline-flex items-center px-4 py-1 bg-primary text-white rounded-full font-medium hover:bg-[#16313F] transition"
                 >
                   En savoir plus
                   <ChevronRightIcon className="w-4 h-4 ml-1" />
@@ -327,14 +326,14 @@ export default function Home() {
       </div>
 
       <div className="flex justify-center content-center">
-        <button className="bg-[#23495A] px-6 py-2 rounded-full text-white font-semibold hover:bg-[#16313F] transition">
+        <button className="bg-primary px-6 py-2 rounded-full text-white font-semibold hover:bg-[#16313F] transition">
           En savoir plus
         </button>
       </div>
 
       {/* Qualité, Environnement, Certification Section */}
       <div className="flex items-center mb-8 mt-12">
-        <div className="bg-gradient-to-r from-[#23495A] to-black px-8 py-4 rounded-lg text-white text-2xl font-bold uppercase shadow tracking-wide">
+        <div className="bg-gradient-to-r from-primary to-black px-8 py-4 rounded-lg text-white text-2xl font-bold uppercase shadow tracking-wide">
           QUALITÉ, ENVIRONNEMENT, CERTIFICATION
         </div>
       </div>
@@ -343,60 +342,77 @@ export default function Home() {
         {/* Qualité Card */}
         <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between min-h-[320px]">
           <div>
-        <h2 className="text-2xl font-bold text-[#23495A] mb-4 uppercase">QUALITÉ</h2>
-        <p className="text-[#23495A] mb-6">
-          Techno Cast Groupe est fier d’annoncer l’obtention de la certification ISO 9001:2015 pour…..
-        </p>
+            <h2 className="text-2xl font-bold text-primary mb-4 uppercase">
+              QUALITÉ
+            </h2>
+            <p className="text-primary mb-6">
+              Techno Cast Groupe est fier d’annoncer l’obtention de la
+              certification ISO 9001:2015 pour…..
+            </p>
           </div>
           <div className="flex justify-start">
-        <Link href="#" className="inline-flex items-center px-6 py-2 bg-[#23495A] text-white rounded-full font-medium hover:bg-[#16313F] transition">
-          En savoir plus
-          <ChevronRightIcon className="w-5 h-5 ml-2" />
-        </Link>
+            <Link
+              href="#"
+              className="inline-flex items-center px-6 py-2 bg-primary text-white rounded-full font-medium hover:bg-[#16313F] transition"
+            >
+              En savoir plus
+              <ChevronRightIcon className="w-5 h-5 ml-2" />
+            </Link>
           </div>
         </div>
 
         {/* Environnement Card */}
         <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between min-h-[320px]">
           <div>
-        <h2 className="text-2xl font-bold text-[#23495A] mb-4 uppercase">ENVIRONNEMENT</h2>
-        <p className="text-[#23495A] mb-6">
-          Chez Techno Cast, nous sommes résolument engagés envers la protection de l’environnement……
-        </p>
+            <h2 className="text-2xl font-bold text-primary mb-4 uppercase">
+              ENVIRONNEMENT
+            </h2>
+            <p className="text-primary mb-6">
+              Chez Techno Cast, nous sommes résolument engagés envers la
+              protection de l’environnement……
+            </p>
           </div>
           <div className="flex justify-start">
-        <Link href="#" className="inline-flex items-center px-6 py-2 bg-[#23495A] text-white rounded-full font-medium hover:bg-[#16313F] transition">
-          En savoir plus
-          <ChevronRightIcon className="w-5 h-5 ml-2" />
-        </Link>
+            <Link
+              href="#"
+              className="inline-flex items-center px-6 py-2 bg-primary text-white rounded-full font-medium hover:bg-[#16313F] transition"
+            >
+              En savoir plus
+              <ChevronRightIcon className="w-5 h-5 ml-2" />
+            </Link>
           </div>
         </div>
 
         {/* Certification Card */}
         <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between min-h-[320px]">
           <div>
-        <h2 className="text-2xl font-bold text-[#23495A] mb-4 uppercase">CERTIFICATION</h2>
-        <p className="text-[#23495A] mb-2">
-          ISO 9001 : 2005 Management System
-        </p>
-        <p className="font-semibold text-[#23495A] mb-6">
-          <Link href="#" className="underline hover:text-[#16313F]">
-            Download Certificate (325 kb)
-          </Link>
-        </p>
+            <h2 className="text-2xl font-bold text-primary mb-4 uppercase">
+              CERTIFICATION
+            </h2>
+            <p className="text-primary mb-2">
+              ISO 9001 : 2005 Management System
+            </p>
+            <p className="font-semibold text-primary mb-6">
+              <Link href="#" className="underline hover:text-[#16313F]">
+                Download Certificate (325 kb)
+              </Link>
+            </p>
           </div>
           <div className="flex justify-start">
-        <Link href="#" className="inline-flex items-center px-6 py-2 bg-[#23495A] text-white rounded-full font-medium hover:bg-[#16313F] transition">
-          En savoir plus
-          <ChevronRightIcon className="w-5 h-5 ml-2" />
-        </Link>
+            <Link
+              href="#"
+              className="inline-flex items-center px-6 py-2 bg-primary text-white rounded-full font-medium hover:bg-[#16313F] transition"
+            >
+              En savoir plus
+              <ChevronRightIcon className="w-5 h-5 ml-2" />
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Actualité Section */}
       <div className="flex items-center mb-8">
-        <div className="bg-gradient-to-r from-[#23495A] to-black px-8 py-4 rounded-lg text-white text-2xl font-bold uppercase shadow tracking-wide">
+        <div className="bg-gradient-to-r from-primary to-black px-8 py-4 rounded-lg text-white text-2xl font-bold uppercase shadow tracking-wide">
           ACTUALITÉ
         </div>
       </div>
