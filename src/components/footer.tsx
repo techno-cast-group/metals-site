@@ -1,5 +1,5 @@
-import ContactForm from "./ContactForm";
-import TextType from "./TextAnimations/TextType/TextType";
+import ContactForm from "./contact-form";
+import TextType from "./blocks/TextAnimations/TextType/TextType";
 
 function Footer() {
   return (

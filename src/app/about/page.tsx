@@ -1,6 +1,14 @@
 import Image from "next/image";
 import techLogo from "~/assets/Technocast_logo-01f-1-1.png";
 import hqImg from "~/assets/3-1024x683.png";
+import { Metadata } from "next";
+import AnimatedContent from "~/components/blocks/Animations/AnimatedContent/AnimatedContent";
+import SpotlightCard from "~/components/blocks/Components/SpotlightCard/SpotlightCard";
+import { Icon } from "~/components/icon";
+
+export const metadata: Metadata = {
+  title: "A Propos",
+};
 
 function AboutPage() {
   return (
@@ -76,6 +84,124 @@ function AboutPage() {
           </div>
         </div>
       </div>
+
+      <br />
+      <br />
+
+      <AnimatedContent
+        distance={150}
+        direction="horizontal"
+        reverse={true}
+        duration={1.2}
+        ease="bounce.out"
+        initialOpacity={0.2}
+        animateOpacity
+        scale={1.1}
+        threshold={0.2}
+        delay={0.3}
+      >
+        <div className="bg-primary rounded-3xl p-8 shadow-lg text-white max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+            TECHNO CAST METALS & ALLOYS
+          </h2>
+          <div className="flex justify-center mb-6">
+            <Image
+              width={300}
+              height={500}
+              src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?q=80&w=600"
+              alt="Techno Cast Metals & Alloys"
+              className="rounded-2xl shadow-md w-full max-w-xl h-64 object-cover"
+            />
+          </div>
+          <p className="mb-4">
+            <span className="font-bold">TECHNOCAST Metals and Alloys</span>,
+            filiale du <span className="font-bold">TECHNOCAST Group</span>, est
+            un acteur majeur dans le secteur de la sidérurgie, offrant des
+            solutions globales <span className="font-bold">et</span> innovantes
+            dans le domaine de l’anti-usure. Spécialisée dans la fabrication et
+            le traitement des alliages métalliques,{" "}
+            <span className="font-bold">TECHNOCAST Metals and Alloys</span> met
+            à la disposition de ses clients son expertise pointue pour répondre
+            aux défis techniques de l’industrie sidérurgique, tout en
+            contribuant à l’amélioration continue de la performance des
+            équipements.
+          </p>
+          <p>
+            Notre mission principale est d’atteindre l’excellence opérationnelle
+            à travers une gestion rigoureuse, une innovation constante et une
+            écoute attentive des besoins de nos partenaires industriels.
+          </p>
+        </div>
+      </AnimatedContent>
+
+      <br />
+      <br />
+      <br />
+
+      <h1 className="font-bold text-3xl text-center mb-10">
+        Mission, Vision et Valeurs
+      </h1>
+
+      <AnimatedContent
+        distance={150}
+        direction="horizontal"
+        reverse={true}
+        duration={1.2}
+        ease="bounce.out"
+        initialOpacity={0.2}
+        animateOpacity
+        scale={1.1}
+        threshold={0.2}
+        delay={0.3}
+      >
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
+        <SpotlightCard
+          className="custom-spotlight-card text-white flex flex-col items-center justify-start h-[400px] w-full max-w-xs mx-auto"
+          spotlightColor="rgba(0, 229, 255, 0.2)"
+        >
+          <Icon icon="streamline-sharp-color:notebook" width="32" height="32" />
+          <h2 className="text-4xl font-bold mt-4 mb-2 text-center">Mission</h2>
+          <p className="text-center">
+            Chez TECHNOCAST Metals and Alloys, notre mission est d’offrir des
+            solutions innovantes et durables pour l’industrie sidérurgique, en
+            optimisant les équipements et en réduisant l’usure, tout en
+            garantissant la qualité et la performance de nos produits et
+            services
+          </p>
+        </SpotlightCard>
+
+        <SpotlightCard
+          className="custom-spotlight-card text-white flex flex-col items-center justify-start h-[400px] w-full max-w-xs mx-auto"
+          spotlightColor="rgba(0, 229, 255, 0.2)"
+        >
+          <Icon icon="flat-color-icons:binoculars" width="48" height="48" />
+          <h2 className="text-4xl font-bold mt-4 mb-2 text-center">Vision</h2>
+          <p className="text-center">
+            Devenir le leader mondial des solutions anti-usure et des alliages
+            métalliques, reconnu pour notre expertise, notre capacité à
+            anticiper les besoins de nos clients et notre engagement envers la
+            durabilité.
+          </p>
+        </SpotlightCard>
+
+        <SpotlightCard
+          className="custom-spotlight-card text-white flex flex-col items-center justify-start h-[400px] w-full max-w-xs mx-auto"
+          spotlightColor="rgba(0, 229, 255, 0.2)"
+        >
+          <Icon icon="streamline-stickies-color:plant-1-duo" width="40" height="40" />
+          <h2 className="text-4xl font-bold mt-4 mb-2 text-center">Valeurs</h2>
+          <p className="text-center">
+            Nos valeurs : Excellence, Innovation, Durabilité, Collaboration,
+            Réactivité et Responsabilité. Nous nous engageons à offrir des
+            solutions de qualité, innovantes, durables et réactives, tout en
+            favorisant la collaboration et en assumant notre responsabilité
+            environnementale et sociale.
+          </p>
+        </SpotlightCard>
+          </div>
+        </div>
+      </AnimatedContent>
     </>
   );
 }
