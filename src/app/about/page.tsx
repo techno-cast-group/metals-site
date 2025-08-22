@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import techLogo from "~/assets/Technocast_logo-01f-1-1.png";
 import hqImg from "~/assets/3-1024x683.png";
@@ -5,6 +6,8 @@ import { Metadata } from "next";
 import AnimatedContent from "~/components/blocks/Animations/AnimatedContent/AnimatedContent";
 import SpotlightCard from "~/components/blocks/Components/SpotlightCard/SpotlightCard";
 import { Icon } from "~/components/icon";
+import History from "~/components/history";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "A Propos",
@@ -156,52 +159,154 @@ function AboutPage() {
       >
         <div className="flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
-        <SpotlightCard
-          className="custom-spotlight-card text-white flex flex-col items-center justify-start h-[400px] w-full max-w-xs mx-auto"
-          spotlightColor="rgba(0, 229, 255, 0.2)"
-        >
-          <Icon icon="streamline-sharp-color:notebook" width="32" height="32" />
-          <h2 className="text-4xl font-bold mt-4 mb-2 text-center">Mission</h2>
-          <p className="text-center">
-            Chez TECHNOCAST Metals and Alloys, notre mission est d’offrir des
-            solutions innovantes et durables pour l’industrie sidérurgique, en
-            optimisant les équipements et en réduisant l’usure, tout en
-            garantissant la qualité et la performance de nos produits et
-            services
-          </p>
-        </SpotlightCard>
+            <SpotlightCard
+              className="custom-spotlight-card text-white flex flex-col items-center justify-start h-[400px] w-full max-w-xs mx-auto"
+              spotlightColor="rgba(0, 229, 255, 0.2)"
+            >
+              <Icon
+                icon="streamline-sharp-color:notebook"
+                width="32"
+                height="32"
+              />
+              <h2 className="text-4xl font-bold mt-4 mb-2 text-center">
+                Mission
+              </h2>
+              <p className="text-center">
+                Chez TECHNOCAST Metals and Alloys, notre mission est d’offrir
+                des solutions innovantes et durables pour l’industrie
+                sidérurgique, en optimisant les équipements et en réduisant
+                l’usure, tout en garantissant la qualité et la performance de
+                nos produits et services
+              </p>
+            </SpotlightCard>
 
-        <SpotlightCard
-          className="custom-spotlight-card text-white flex flex-col items-center justify-start h-[400px] w-full max-w-xs mx-auto"
-          spotlightColor="rgba(0, 229, 255, 0.2)"
-        >
-          <Icon icon="flat-color-icons:binoculars" width="48" height="48" />
-          <h2 className="text-4xl font-bold mt-4 mb-2 text-center">Vision</h2>
-          <p className="text-center">
-            Devenir le leader mondial des solutions anti-usure et des alliages
-            métalliques, reconnu pour notre expertise, notre capacité à
-            anticiper les besoins de nos clients et notre engagement envers la
-            durabilité.
-          </p>
-        </SpotlightCard>
+            <SpotlightCard
+              className="custom-spotlight-card text-white flex flex-col items-center justify-start h-[400px] w-full max-w-xs mx-auto"
+              spotlightColor="rgba(0, 229, 255, 0.2)"
+            >
+              <Icon icon="flat-color-icons:binoculars" width="48" height="48" />
+              <h2 className="text-4xl font-bold mt-4 mb-2 text-center">
+                Vision
+              </h2>
+              <p className="text-center">
+                Devenir le leader mondial des solutions anti-usure et des
+                alliages métalliques, reconnu pour notre expertise, notre
+                capacité à anticiper les besoins de nos clients et notre
+                engagement envers la durabilité.
+              </p>
+            </SpotlightCard>
 
-        <SpotlightCard
-          className="custom-spotlight-card text-white flex flex-col items-center justify-start h-[400px] w-full max-w-xs mx-auto"
-          spotlightColor="rgba(0, 229, 255, 0.2)"
-        >
-          <Icon icon="streamline-stickies-color:plant-1-duo" width="40" height="40" />
-          <h2 className="text-4xl font-bold mt-4 mb-2 text-center">Valeurs</h2>
-          <p className="text-center">
-            Nos valeurs : Excellence, Innovation, Durabilité, Collaboration,
-            Réactivité et Responsabilité. Nous nous engageons à offrir des
-            solutions de qualité, innovantes, durables et réactives, tout en
-            favorisant la collaboration et en assumant notre responsabilité
-            environnementale et sociale.
-          </p>
-        </SpotlightCard>
+            <SpotlightCard
+              className="custom-spotlight-card text-white flex flex-col items-center justify-start h-[400px] w-full max-w-xs mx-auto"
+              spotlightColor="rgba(0, 229, 255, 0.2)"
+            >
+              <Icon
+                icon="streamline-stickies-color:plant-1-duo"
+                width="40"
+                height="40"
+              />
+              <h2 className="text-4xl font-bold mt-4 mb-2 text-center">
+                Valeurs
+              </h2>
+              <p className="text-center">
+                Nos valeurs : Excellence, Innovation, Durabilité, Collaboration,
+                Réactivité et Responsabilité. Nous nous engageons à offrir des
+                solutions de qualité, innovantes, durables et réactives, tout en
+                favorisant la collaboration et en assumant notre responsabilité
+                environnementale et sociale.
+              </p>
+            </SpotlightCard>
           </div>
         </div>
       </AnimatedContent>
+
+      <br />
+      <br />
+      <br />
+
+      <History />
+
+      <br />
+      <br />
+
+      {/* Qualité, Environnement, Certification Section */}
+      <div className="flex items-center mb-8 mt-12">
+        <div className="bg-gradient-to-r from-primary to-black px-8 py-4 rounded-lg text-white text-2xl font-bold uppercase shadow tracking-wide">
+          QUALITÉ, ENVIRONNEMENT, CERTIFICATION
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        {/* Qualité Card */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between min-h-[320px]">
+          <div>
+            <h2 className="text-2xl font-bold text-primary mb-4 uppercase">
+              QUALITÉ
+            </h2>
+            <p className="text-primary mb-6">
+              Techno Cast Groupe est fier d’annoncer l’obtention de la
+              certification ISO 9001:2015 pour…..
+            </p>
+          </div>
+          <div className="flex justify-start">
+            <Link
+              href="#"
+              className="inline-flex items-center px-6 py-2 bg-primary text-white rounded-full font-medium hover:bg-[#16313F] transition"
+            >
+              En savoir plus
+              <Icon icon="typcn:chevron-right" width="24" height="24" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Environnement Card */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between min-h-[320px]">
+          <div>
+            <h2 className="text-2xl font-bold text-primary mb-4 uppercase">
+              ENVIRONNEMENT
+            </h2>
+            <p className="text-primary mb-6">
+              Chez Techno Cast, nous sommes résolument engagés envers la
+              protection de l’environnement……
+            </p>
+          </div>
+          <div className="flex justify-start">
+            <Link
+              href="#"
+              className="inline-flex items-center px-6 py-2 bg-primary text-white rounded-full font-medium hover:bg-[#16313F] transition"
+            >
+              En savoir plus
+              <Icon icon="typcn:chevron-right" width="24" height="24" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Certification Card */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between min-h-[320px]">
+          <div>
+            <h2 className="text-2xl font-bold text-primary mb-4 uppercase">
+              CERTIFICATION
+            </h2>
+            <p className="text-primary mb-2">
+              ISO 9001 : 2005 Management System
+            </p>
+            <p className="font-semibold text-primary mb-6">
+              <Link href="#" className="underline hover:text-[#16313F]">
+                Download Certificate (325 kb)
+              </Link>
+            </p>
+          </div>
+          <div className="flex justify-start">
+            <Link
+              href="#"
+              className="inline-flex items-center px-6 py-2 bg-primary text-white rounded-full font-medium hover:bg-[#16313F] transition"
+            >
+              En savoir plus
+              <Icon icon="typcn:chevron-right" width="24" height="24" />
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

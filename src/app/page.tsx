@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import hqImg from "~/assets/3-1024x683.png";
-import { ChevronRightIcon } from "@heroicons/react/24/solid";
+import { Icon } from "~/components/icon";
 
 type ProductCategory = {
   id: string;
@@ -284,7 +284,7 @@ export default function Home() {
           <Link href="/services">
             <span className="inline-flex items-center px-6 py-2 bg-primary rounded-full font-semibold hover:bg-primary/80 transition">
               En savoir plus
-              <ChevronRightIcon className="w-5 h-5 ml-2" />
+              <Icon icon="typcn:chevron-right" width="24" height="24" />
             </span>
           </Link>
         </div>
@@ -317,7 +317,7 @@ export default function Home() {
                   className="inline-flex items-center px-4 py-1 bg-primary text-white rounded-full font-medium hover:bg-[#16313F] transition"
                 >
                   En savoir plus
-                  <ChevronRightIcon className="w-4 h-4 ml-1" />
+                  <Icon icon="typcn:chevron-right" width="24" height="24" />
                 </Link>
               </div>
             </div>
@@ -356,7 +356,7 @@ export default function Home() {
               className="inline-flex items-center px-6 py-2 bg-primary text-white rounded-full font-medium hover:bg-[#16313F] transition"
             >
               En savoir plus
-              <ChevronRightIcon className="w-5 h-5 ml-2" />
+              <Icon icon="typcn:chevron-right" width="24" height="24" />
             </Link>
           </div>
         </div>
@@ -378,7 +378,7 @@ export default function Home() {
               className="inline-flex items-center px-6 py-2 bg-primary text-white rounded-full font-medium hover:bg-[#16313F] transition"
             >
               En savoir plus
-              <ChevronRightIcon className="w-5 h-5 ml-2" />
+              <Icon icon="typcn:chevron-right" width="24" height="24" />
             </Link>
           </div>
         </div>
@@ -404,16 +404,9 @@ export default function Home() {
               className="inline-flex items-center px-6 py-2 bg-primary text-white rounded-full font-medium hover:bg-[#16313F] transition"
             >
               En savoir plus
-              <ChevronRightIcon className="w-5 h-5 ml-2" />
+              <Icon icon="typcn:chevron-right" width="24" height="24" />
             </Link>
           </div>
-        </div>
-      </div>
-
-      {/* Actualité Section */}
-      <div className="flex items-center mb-8">
-        <div className="bg-gradient-to-r from-primary to-black px-8 py-4 rounded-lg text-white text-2xl font-bold uppercase shadow tracking-wide">
-          ACTUALITÉ
         </div>
       </div>
     </>
