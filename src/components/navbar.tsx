@@ -37,17 +37,10 @@ function Navbar() {
               À propos
             </Link>
           </li>
+
           <li>
             <Link
-              href="/etude"
-              className="text-base-content hover:text-primary transition-colors duration-200 font-medium"
-            >
-              Étude
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/produits"
+              href="/products"
               className="text-base-content hover:text-primary transition-colors duration-200 font-medium"
             >
               Produits
