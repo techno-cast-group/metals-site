@@ -15,6 +15,13 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/**",
       },
+
+      {
+        protocol: "https",
+        hostname: "metal-alloys.technocast.dz",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };

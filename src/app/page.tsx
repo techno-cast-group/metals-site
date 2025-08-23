@@ -5,12 +5,16 @@ import Link from "next/link";
 import Image from "next/image";
 import hqImg from "~/assets/3-1024x683.png";
 import { Icon } from "~/components/icon";
+import z from "zod";
 
-type ProductCategory = {
-  id: string;
-  name: string;
-  image: string;
-};
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const prodCategorySchema = z.object({
+  id: z.uuid(),
+  name: z.string().min(2).max(100),
+  image: z.url(),
+});
+
+type ProductCategory = z.infer<typeof prodCategorySchema>;
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -33,28 +37,28 @@ export default function Home() {
 
   const productCategories: ProductCategory[] = [
     {
+      id: crypto.randomUUID(),
       name: "Tôles",
       image:
         "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?q=80&w=800",
-      id: "1",
     },
     {
+      id: crypto.randomUUID(),
       name: "Barres",
       image:
         "https://images.unsplash.com/photo-1464983953574-0892a716854b?q=80&w=800",
-      id: "2",
     },
     {
+      id: crypto.randomUUID(),
       name: "Profilés",
       image:
         "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800",
-      id: "3",
     },
     {
+      id: crypto.randomUUID(),
       name: "Fonds",
       image:
         "https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?q=80&w=800",
-      id: "4",
     },
   ];
 
