@@ -449,39 +449,46 @@ function Products() {
               />
 
               <div className="tab-content border-base-300 bg-base-100 p-10">
-                <article className="prose lg:prose-xl">
-                  <h1 className="uppercase">{category.name}</h1>
+                <FadeContent
+                  blur={true}
+                  duration={800}
+                  easing="ease-out"
+                  initialOpacity={0}
+                >
+                  <article className="prose lg:prose-xl">
+                    <h1 className="uppercase">{category.name}</h1>
 
-                  <p>{category.desc}</p>
-                </article>
+                    <p>{category.desc}</p>
+                  </article>
 
-                <div className="grid grid-cols-3 gap-4">
-                  <For
-                    each={category.products}
-                    render={(product: Product) => (
-                      <TiltedCard
-                        key={product.id}
-                        imageSrc={product.image}
-                        altText={product.name}
-                        captionText={product.name}
-                        containerHeight="300px"
-                        containerWidth="300px"
-                        imageHeight="300px"
-                        imageWidth="300px"
-                        rotateAmplitude={12}
-                        scaleOnHover={1.2}
-                        showMobileWarning={false}
-                        showTooltip={true}
-                        displayOverlayContent={true}
-                        overlayContent={
-                          <p className="tilted-card-demo-text">
-                            {product.name}
-                          </p>
-                        }
-                      />
-                    )}
-                  />
-                </div>
+                  <div className="grid grid-cols-3 gap-4">
+                    <For
+                      each={category.products}
+                      render={(product: Product) => (
+                        <TiltedCard
+                          key={product.id}
+                          imageSrc={product.image}
+                          altText={product.name}
+                          captionText={product.name}
+                          containerHeight="300px"
+                          containerWidth="300px"
+                          imageHeight="300px"
+                          imageWidth="300px"
+                          rotateAmplitude={12}
+                          scaleOnHover={1.2}
+                          showMobileWarning={false}
+                          showTooltip={true}
+                          displayOverlayContent={true}
+                          overlayContent={
+                            <p className="tilted-card-demo-text">
+                              {product.name}
+                            </p>
+                          }
+                        />
+                      )}
+                    />
+                  </div>
+                </FadeContent>
               </div>
             </Fragment>
           )}
