@@ -16,6 +16,7 @@ const productSchema = z.object({
 
 type Product = z.infer<typeof productSchema>;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const categorySchema = z.object({
   id: z.uuid(),
   name: z.string().min(2).max(100),
@@ -494,6 +495,12 @@ function Products() {
           )}
         />
       </div>
+
+      <br />
+      <br />
+      <br />
+
+      
     </>
   );
 }

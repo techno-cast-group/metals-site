@@ -246,16 +246,36 @@ export default function Home() {
       <div className="w-full bg-primary py-8 flex justify-center items-center">
         <div className="flex gap-12 flex-wrap justify-center items-center">
           {/* Replace these with your actual company logo images */}
-          <Image src="/sarpi-logo.png" alt="Sarpi" width={80} height={60} />
           <Image
-            src="/sonatrach-logo.png"
+            src="https://technocast.dz/home/clients/22.png"
+            alt="Sarpi"
+            width={80}
+            height={60}
+          />
+          <Image
+            src="https://technocast.dz/home/clients/7.png"
             alt="Sonatrach"
             width={80}
             height={60}
           />
-          <Image src="/gcb-logo.png" alt="GCB" width={80} height={60} />
-          <Image src="/cosider-logo.png" alt="Cosider" width={80} height={60} />
-          <Image src="/eni-logo.png" alt="Eni" width={80} height={60} />
+          <Image
+            src="https://technocast.dz/home/clients/17.png"
+            alt="GCB"
+            width={80}
+            height={60}
+          />
+          <Image
+            src="https://technocast.dz/home/clients/3.png"
+            alt="Cosider"
+            width={80}
+            height={60}
+          />
+          <Image
+            src="https://technocast.dz/home/clients/18.png"
+            alt="Eni"
+            width={80}
+            height={60}
+          />
         </div>
       </div>
 
